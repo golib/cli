@@ -185,7 +185,7 @@ func (f IntSliceFlag) Apply(set *flag.FlagSet) {
 					s = strings.TrimSpace(s)
 					err := newVal.Set(s)
 					if err != nil {
-						fmt.Fprintf(ErrWriter, err.Error())
+						fmt.Fprint(ErrWriter, err.Error())
 					}
 				}
 				f.Value = newVal
@@ -245,7 +245,7 @@ func (f Int64SliceFlag) Apply(set *flag.FlagSet) {
 					s = strings.TrimSpace(s)
 					err := newVal.Set(s)
 					if err != nil {
-						fmt.Fprintf(ErrWriter, err.Error())
+						fmt.Fprint(ErrWriter, err.Error())
 					}
 				}
 				f.Value = newVal
